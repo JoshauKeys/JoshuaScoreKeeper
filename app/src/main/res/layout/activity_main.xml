@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="#158C07"
+    android:id="@+id/MainScreen">
+
+
+
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score Keeper"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+
+
+    <!-- Team Names and Scores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+
+
+
+        <!-- Team 1 Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+
+
+            <EditText
+                android:id="@+id/teamNameLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Team Name"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/scoreDisplayLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+
+
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+
+
+
+        <!-- Team 2 Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+
+
+            <EditText
+                android:id="@+id/teamNameRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Team Name"
+                android:minHeight="48dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/scoreDisplayRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <!-- Buttons for Scores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+
+
+
+        <!-- Team 1 Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+
+
+            <Button
+                android:id="@+id/touchdownLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Touchdown"
+                android:onClick="playit"
+
+
+                />
+
+
+
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/fieldGoalLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Field Goal (2)"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/resetLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/subtractLeft1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/subtractLeft5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/subtractLeft10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-10"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+
+
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+
+
+
+        <!-- Team 2 Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+
+
+            <Button
+                android:id="@+id/touchdownRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Touchdown" />
+
+
+
+
+            <Button
+                android:id="@+id/fieldGoalRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Field Goal (2)"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/resetRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/subtractRight1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/subtractRight5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-5"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <Button
+                android:id="@+id/subtractRight10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-10"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: 10:00"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+
+
+        <Button
+            android:id="@+id/startTimerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Timer" />
+
+
+
+
+        <Button
+            android:id="@+id/pauseTimerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause Timer"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/resetAllButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset All"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
